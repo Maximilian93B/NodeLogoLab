@@ -32,3 +32,8 @@ inquirer.prompt([
 ]).then(answers => {
     //Use input to generate SVG
 })
+
+function isColorValid(color) {
+    return /^#([0-9A-F]{3}){1,2}$/i.test(color) || ['red', 'green', 'blue', 'yellow','black','white'].includes(color.toLowerCase());
+    // "/^#([0-9A-F]{3}){1,2}$/i.test(color)" 
+}  

@@ -14,7 +14,7 @@
   },
   "description": "",
   "dependencies": {
-    "inquirer": "^9.2.12",
+    "inquirer": "^8.2.4",
     "node.js": "^0.0.1-security"
   },
   "devDependencies": {
