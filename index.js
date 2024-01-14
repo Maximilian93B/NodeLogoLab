@@ -44,10 +44,9 @@ inquirer.prompt([
 
 
 function saveSVG(svgString, fileName = 'logo.svg') {
-   
-    try{
+    try {
         // Used writeFileSync to save SVG synchronously
-        fs.writeFileSync(fileName, svgString, "utf-8 ");
+        fs.writeFileSync(fileName, svgString, 'utf-8');
         // confirmation when write successful 
         console.log('${fileName} has been saved.');
     } catch(err) {

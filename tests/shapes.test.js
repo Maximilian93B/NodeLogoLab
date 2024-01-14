@@ -3,6 +3,8 @@
 
 // Import shape you want to test using the (../././) format 
 const Triangle = require('../lib/triangle'); 
+const Square = require('../lib/square');
+const Circle = require('../lib/circle');
 
 // Describe defines a test suite for Triangle 
 describe('Triangle', () => {
@@ -15,22 +17,16 @@ describe('Triangle', () => {
     });
 });
 
-
-const Square = require('../lib/square');
-
 describe('Square', ()=> {
     test ('renders correct SVG markup', () => {
-        const square = new square ('red'); 
-        expect(square.render()).toBe('<rect width="80" height="80" fill="red" />');
+        const square = new Square('red'); 
+        expect(squarequare.render()).toBe('<rect width="80" height="80" fill="red" />');
     });
 });
 
-
-const Circle = require('../lib/circle');
-
 describe('Circle', ()=> {
     test('Renders correct SVG markup', () => {
-        const circle = new circle ('red');
+        const circle = new Circle ('red');
         expect(circle.render()).toBe('<circle cx="50" cy="50" r="40" fill="red" />');
     });
 });
