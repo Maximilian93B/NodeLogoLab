@@ -1,9 +1,14 @@
 const inquirer = require('inquirer');
 const fs = require('fs');
+const { request } = require('http');
 
+//Define shape classes = generateSVG --> (import from lib) 
+const Triangle = require('./lib/triangle');
+const Circle = require('./lib/circle');
+const Square = require ('./lib/square');
+const generateSVG = require('./lib/svgGenerator');
 
 // Prompt using inquirer to display Array of input questions 
-
 inquirer.prompt([
     {
         type: 'input',
@@ -31,13 +36,14 @@ inquirer.prompt([
     },
 ]).then(answers => {
     //Use input to generate SVG
+
+    const svgString = generateSVG(answers.shape , answers.textColor, answers.text, answers.shapeColor);
+    
+    saveSVG(svgString);
 })
 
 
-
-
-
-function saveSVg(svgString, fileName = 'logo.svg') {
+function saveSVG(svgString, fileName = 'logo.svg') {
    
     try{
         // Used writeFileSync to save SVG synchronously
@@ -50,7 +56,9 @@ function saveSVg(svgString, fileName = 'logo.svg') {
 } 
 
 
+//Validation functions for user input 
 
+// Color Validation 
 function isColorValid(color) {
     return /^#([0-9A-F]{3}){1,2}$/i.test(color) || ['red', 'green', 'blue', 'yellow','black','white'].includes(color.toLowerCase());
  
