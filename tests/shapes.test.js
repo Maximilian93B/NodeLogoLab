@@ -21,6 +21,7 @@ describe('Triangle', () => {
 describe('Square', ()=> {
     test ('renders correct SVG markup', () => {
         const square = new Square('red'); 
+        console.log(square.render());
         expect(square.render()).toBe('<rect width="80" height="80" fill="red" />');
     });
 });
@@ -28,6 +29,7 @@ describe('Square', ()=> {
 describe('Circle', ()=> {
     test('Renders correct SVG markup', () => {
         const circle = new Circle ('red');
+        console.log(circle.render());
         expect(circle.render()).toBe('<circle cx="50" cy="50" r="40" fill="red" />');
     });
 });

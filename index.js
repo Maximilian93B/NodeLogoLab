@@ -17,9 +17,10 @@ inquirer.prompt([
         validate: input => input.length <= 3 && input.length > 0
     },
     {
-        type: 'input',
+        type: 'list',
         name: 'textColor',
         message: 'Enter a color for the text', // will have to figure out a way for user to select color and validate input 
+        choices: ['Red', 'Green', 'Blue']
         //add validation for color choice 
     },
     {
@@ -29,9 +30,10 @@ inquirer.prompt([
         choices: ['Circle', 'Triangle', 'Square']   
     },
     {
-        type: 'input',
+        type: 'list',
         name: 'shapeColor',
-        message: 'Enter a color for the shape'
+        message: 'Enter a color for the shape',
+        choices: ['Red', 'Green', 'Blue']
         //add color validation same as foor 'textColor'
     },
 ]).then(answers => {
