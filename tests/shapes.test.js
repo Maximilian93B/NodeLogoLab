@@ -13,14 +13,14 @@ describe('Triangle', () => {
         // Create test case for triangle with the color 'red'
         const triangle = new Triangle('red');
         // test will expect SVG markup string to match Triangle Class in ('../lib/triangle')
-        expect(triangle.render()).toBe('<polygon points="50,15 100,100 0,100" fill="red" />');
+        expect(triangle.render()).toBe(`<polygon points="50,15 100,100 0,100" fill="red" />`);
     });
 });
 
 describe('Square', ()=> {
     test ('renders correct SVG markup', () => {
         const square = new Square('red'); 
-        expect(squarequare.render()).toBe('<rect width="80" height="80" fill="red" />');
+        expect(square.render()).toBe('<rect width="80" height="80" fill="red" />');
     });
 });
 
