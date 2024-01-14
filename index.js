@@ -1,5 +1,5 @@
 const inquirer = require('inquirer');
-
+const fs = require('fs');
 
 
 // Prompt using inquirer to display Array of input questions 
@@ -33,7 +33,25 @@ inquirer.prompt([
     //Use input to generate SVG
 })
 
+
+
+
+
+function saveSVg(svgString, fileName = 'logo.svg') {
+   
+    try{
+        // Used writeFileSync to save SVG synchronously
+        fs.writeFileSync(fileName, svgString, "utf-8 ");
+        // confirmation when write successful 
+        console.log('${fileName} has been saved.');
+    } catch(err) {
+        console.error('An error has occured:', err);
+    }
+} 
+
+
+
 function isColorValid(color) {
     return /^#([0-9A-F]{3}){1,2}$/i.test(color) || ['red', 'green', 'blue', 'yellow','black','white'].includes(color.toLowerCase());
-    // "/^#([0-9A-F]{3}){1,2}$/i.test(color)" 
+ 
 }  
