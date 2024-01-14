@@ -12,6 +12,7 @@ describe('Triangle', () => {
     test('renders correct SVG markup', () => {
         // Create test case for triangle with the color 'red'
         const triangle = new Triangle('red');
+        console.log(triangle.render()); // Looking for output for trouble shooting 
         // test will expect SVG markup string to match Triangle Class in ('../lib/triangle')
         expect(triangle.render()).toBe(`<polygon points="50,15 100,100 0,100" fill="red" />`);
     });
