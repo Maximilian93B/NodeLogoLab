@@ -45,12 +45,12 @@ inquirer.prompt([
 })
 
 
-function saveSVG(svgString, fileName = 'logo.svg') {
+function saveSVG(svgString, fileName = 'MySVGlogo.svg') {
     try {
         // Used writeFileSync to save SVG synchronously
         fs.writeFileSync(fileName, svgString, 'utf-8');
         // confirmation when write successful 
-        console.log('${fileName} has been saved.');
+        console.log('SVG has been saved.');
     } catch(err) {
         console.error('An error has occured:', err);
     }

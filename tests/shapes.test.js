@@ -12,7 +12,7 @@ describe('Triangle', () => {
     test('renders correct SVG markup', () => {
         // Create test case for triangle with the color 'red'
         const triangle = new Triangle('red');
-        console.log(triangle.render()); // Looking for output for trouble shooting 
+        console.log("Triangle Matched!",triangle.render()); // Looking for output for trouble shooting 
         // test will expect SVG markup string to match Triangle Class in ('../lib/triangle')
         expect(triangle.render()).toBe(`<polygon points="50,15 100,100 0,100" fill="red" />`);
     });
@@ -21,7 +21,7 @@ describe('Triangle', () => {
 describe('Square', ()=> {
     test ('renders correct SVG markup', () => {
         const square = new Square('red'); 
-        console.log(square.render());
+        console.log("Square Matched!",square.render());
         expect(square.render()).toBe('<rect width="80" height="80" fill="red" />');
     });
 });
@@ -29,7 +29,7 @@ describe('Square', ()=> {
 describe('Circle', ()=> {
     test('Renders correct SVG markup', () => {
         const circle = new Circle ('red');
-        console.log(circle.render());
+        console.log("Circle Matched!",circle.render());
         expect(circle.render()).toBe('<circle cx="50" cy="50" r="40" fill="red" />');
     });
 });
