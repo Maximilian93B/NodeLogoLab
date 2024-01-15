@@ -1,4 +1,4 @@
-// Will have to declare all shapes seperately as each shape has its own file 
+// Will have to declare all shapes seperately as each shape has its own file
 // I will comment on one test, all the test cases are the same. 
 
 // Import shape you want to test using the (../././) format 
