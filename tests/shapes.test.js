@@ -14,7 +14,7 @@ describe('Triangle', () => {
         const triangle = new Triangle('red');
         console.log("Triangle Matched!",triangle.render()); // Looking for output for trouble shooting 
         // test will expect SVG markup string to match Triangle Class in ('../lib/triangle')
-        expect(triangle.render()).toBe(`<polygon points="50,15 100,100 0,100" fill="red" />`);
+        expect(triangle.render()).toBe(`<polygon points="100,30 200,200 0,200" fill="red" />`);
     });
 });
 
@@ -22,7 +22,7 @@ describe('Square', ()=> {
     test ('renders correct SVG markup', () => {
         const square = new Square('red'); 
         console.log("Square Matched!",square.render());
-        expect(square.render()).toBe('<rect width="80" height="80" fill="red" />');
+        expect(square.render()).toBe('<rect width="200" height="200" fill="red" />');
     });
 });
 
@@ -30,6 +30,6 @@ describe('Circle', ()=> {
     test('Renders correct SVG markup', () => {
         const circle = new Circle ('red');
         console.log("Circle Matched!",circle.render());
-        expect(circle.render()).toBe('<circle cx="50" cy="50" r="40" fill="red" />');
+        expect(circle.render()).toBe('<circle cx="150" cy="100" r="100" fill="red" />');
     });
 });
