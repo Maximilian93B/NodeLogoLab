@@ -17,7 +17,7 @@ NodeLogoLab is a streamlined, Node.js-based command-line application designed to
 To install NodeLogoLab, follow these steps:
 
 1. **Clone the Repository:**
-Replace `[URL to your repository]` with the actual URL of your GitHub repository.
+Replace `[https://github.com/Maximilian93B/NodeLogoLab.git]` with the actual URL of your GitHub repository.
 
 2. **Navigate to the Project Directory:**
 
